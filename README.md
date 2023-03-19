@@ -26,9 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-
-READ ME \{*_*}/
-       +--[|]--+    
-         _/ \_
+READ ME
 ** REMAINING FOLDERS CAN BE COPIED FROM ANGULAR TEMPLATE
 LAUCH BOTH APPLICATION AND JSON SERVER BECAUSE THE DETAILS WILL BE STORED IN BACKEND **
