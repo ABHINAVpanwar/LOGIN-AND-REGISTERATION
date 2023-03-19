@@ -1,0 +1,22 @@
+.butn {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+input {
+    width: 400px;
+}
+
+.b1 {
+    background-color: lightskyblue;
+    margin-right: 10px;
+}
+
+.b2 {
+    background-color: red;
+}
+
+table {
+    margin-top: 40px;
+}

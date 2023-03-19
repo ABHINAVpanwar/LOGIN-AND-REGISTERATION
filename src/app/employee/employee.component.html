@@ -1,0 +1,111 @@
+<!-- Button trigger modal -->
+<div class="butn"><button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+  id="b"
+>
+  REGISTER EMPLOYEE
+</button></div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ENTER EMPLOYEE DETAILS</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group row">
+          
+            <div class="col-sm-10">
+              <input type="text" formControlName="firstName" class="form-control form-control-lg" id="colFormLabelLg" placeholder="FIRST NAME">
+            </div>
+            <div class="form-group row">
+          
+              <div class="col-sm-10">
+                <input type="text" formControlName="lastName"  class="form-control form-control-lg" id="colFormLabelLg" placeholder="LAST NAME">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <input type="text" formControlName="email"  class="form-control form-control-lg" id="colFormLabelLg" placeholder="EMAIL ID">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <input type="email" formControlName="mobileno" class="form-control form-control-lg" id="colFormLabelLg" placeholder="PHONE NUMBER">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <input type="text" formControlName="salary"  class="form-control form-control-lg" id="colFormLabelLg" placeholder="SALARY">
+              </div>
+            </div>
+          </div>
+        </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)=" postEmployeeDetails()">ADD</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">
+        EMPLOYEE ID
+      </th>
+      <th scope="col">
+        FIRST NAME
+      </th>
+      <th scope="col">
+        LAST NAME
+      </th>
+      <th scope="col">
+        EMAIL
+      </th>
+      <th scope="col">
+        MOBILE NO 
+      </th>
+      <th scope="col">
+        SALARY
+      </th>
+      <th scope="col">
+        ACTION
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of employedata">
+      <td>{{row.id}}</td>
+      <td>{{row.firstName}}</td>
+      <td>{{row.lastName}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.mobileno}}</td>
+      <td>{{row.salary}}</td>
+      <td>
+        <button class="b2" (click)="deleteEmployee(row)">DELETE</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
